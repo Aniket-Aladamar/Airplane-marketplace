@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aircraft Maintenance - Airplane Marketplace</title>
+    <link rel="stylesheet" href="style_maintenanca.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://via.placeholder.com/100x50?text=Logo" alt="Marketplace Logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for airplanes...">
+                <button>Search</button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="services.html" class="dropbtn">Services</a>
+                    <div class="dropdown-content">
+                        <a href="maintenance.html">Aircraft Maintenance</a>
+                        <a href="training.html">Pilot Training</a>
+                        <a href="consultation.html">Consultation</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="about.html" class="dropbtn">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="overview.html">Company Overview</a>
+                        <a href="team.html">Our Team</a>
+                        <a href="careers.html">Careers</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="support.html" class="dropbtn">Support</a>
+                    <div class="dropdown-content">
+                        <a href="faqs.html">FAQs</a>
+                        <a href="contact-support.html">Contact Support</a>
+                        <a href="documentation.html">Documentation</a>
+                    </div>
+                </div>
+                <a href="#">Login</a>
+            </div>
+        </nav>
+        <div class="title-container">
+            <h1>Aircraft Maintenance</h1>
+        </div>
+    </header>
+    <main>
+        <div class="section-box">
+            <h2>Our Maintenance Services</h2>
+            <p>We provide top-notch aircraft maintenance services. Please fill out the form below to request maintenance for your aircraft.</p>
+            <form id="maintenance-form" action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required minlength="3" maxlength="50" pattern="[A-Za-z\s]+" title="Name should only contain letters and spaces">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="aircraft-model">Aircraft Model:</label>
+                <input type="text" id="aircraft-model" name="aircraft-model" required minlength="2" maxlength="50">
+
+                <label for="issue">Issue Description:</label>
+                <textarea id="issue" name="issue" rows="6" required minlength="10" maxlength="500"></textarea>
+
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Airplane Marketplace. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('maintenance-form').addEventListener('submit', function(event) {
+            if (!confirm('Are you sure you want to submit this request?')) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

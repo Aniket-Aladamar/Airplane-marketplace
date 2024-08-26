@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilot Training - Airplane Marketplace</title>
+    <link rel="stylesheet" href="training.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://via.placeholder.com/100x50?text=Logo" alt="Marketplace Logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for airplanes...">
+                <button>Search</button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="services.html" class="dropbtn">Services</a>
+                    <div class="dropdown-content">
+                        <a href="maintenance.html">Aircraft Maintenance</a>
+                        <a href="training.html">Pilot Training</a>
+                        <a href="consultation.html">Consultation</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="about.html" class="dropbtn">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="overview.html">Company Overview</a>
+                        <a href="team.html">Our Team</a>
+                        <a href="careers.html">Careers</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="support.html" class="dropbtn">Support</a>
+                    <div class="dropdown-content">
+                        <a href="faqs.html">FAQs</a>
+                        <a href="contact-support.html">Contact Support</a>
+                        <a href="documentation.html">Documentation</a>
+                    </div>
+                </div>
+                <a href="#">Login</a>
+            </div>
+        </nav>
+        <div class="title-container">
+            <h1>Pilot Training</h1>
+        </div>
+    </header>
+    <main>
+        <div class="section-box">
+            <h2>Our Training Programs</h2>
+            <p>Our pilot training programs are designed to equip you with the skills and knowledge needed to become a certified pilot. We offer a range of courses from beginner to advanced levels.</p>
+            <h3>Training Process</h3>
+            <p>The training process includes classroom instruction, simulator training, and hands-on flying experience. Our certified instructors will guide you through every step to ensure you gain the necessary skills and confidence.</p>
+            <h3>Cost of Training</h3>
+            <p>The cost of our pilot training programs varies depending on the level of the course. On average, the cost ranges from $10,000 to $50,000. Financing options are available for eligible students.</p>
+            <h3>Contact Us for More Information</h3>
+            <p>If you have any questions or need more information about our pilot training programs, please don't hesitate to <a href="contact-support.html">contact us</a>.</p>
+        </div>
+        <div class="section-box">
+            <h2>Our Training Programs</h2>
+            <p>Enroll in our pilot training programs to become a certified pilot. Fill out the form below to register for a course.</p>
+            <form id="training-form" action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required minlength="3" maxlength="50" pattern="[A-Za-z\s]+" title="Name should only contain letters and spaces">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" title="Phone number should be 10 digits">
+
+                <label for="course">Course Interested In:</label>
+                <select id="course" name="course" required>
+                    <option value="" disabled selected>Select a course</option>
+                    <option value="beginner">Beginner Pilot Training</option>
+                    <option value="intermediate">Intermediate Pilot Training</option>
+                    <option value="advanced">Advanced Pilot Training</option>
+                </select>
+
+                <button type="submit">Enroll Now</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Airplane Marketplace. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('training-form').addEventListener('submit', function(event) {
+            if (!confirm('Are you sure you want to enroll in this course?')) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
